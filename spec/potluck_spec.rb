@@ -21,4 +21,19 @@ RSpec.describe Potluck do
       expect(potluck.dishes).to eq([])
     end
   end
+
+  context '#add_dishes' do
+    it 'adds dishes to dishes array' do
+      potluck = Potluck.new("7-13-18")
+      couscous_salad = Dish.new("Couscous Salad", :appetizer)
+      cocktail_meatballs = Dish.new("Cocktail Meatballs", :entre)
+
+      expect(potluck.dishes).to eq([])
+
+      potluck.add_dish(couscous_salad)
+      potluck.add_dish(cocktail_meatballs)
+
+      expect(potluck.dishes).to eq([couscous_salad, cocktail_meatballs])
+    end
+  end
 end
