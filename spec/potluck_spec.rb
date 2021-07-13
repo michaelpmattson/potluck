@@ -22,7 +22,7 @@ RSpec.describe Potluck do
     end
   end
 
-  context '#add_dishes' do
+  context '#add_dish' do
     it 'adds dishes to dishes array' do
       potluck = Potluck.new("7-13-18")
       couscous_salad = Dish.new("Couscous Salad", :appetizer)
