@@ -8,5 +8,11 @@ RSpec.describe Potluck do
 
       expect(potluck).to be_instance_of(Potluck)
     end
+
+    it 'has a date' do
+      potluck = Potluck.new("7-13-18")
+
+      expect(potluck.date).to eq("7-13-18")
+    end
   end
 end
