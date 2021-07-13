@@ -17,6 +17,6 @@ class Potluck
   end
 
   def get_all_from_category(category)
-    grouped_dishes[category]
+    grouped_dishes == {} ? [] : grouped_dishes[category]
   end
 end
