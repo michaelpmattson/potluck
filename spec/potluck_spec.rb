@@ -60,7 +60,7 @@ RSpec.describe Potluck do
       cocktail_meatballs = Dish.new("Cocktail Meatballs", :entre)
       candy_salad        = Dish.new("Candy Salad", :dessert)
 
-      appetizers = potluck.dishes.get_all_from_category(:appetizer)
+      appetizers = potluck.get_all_from_category(:appetizer)
 
       expect(appetizers).to eq([])
 
@@ -70,7 +70,7 @@ RSpec.describe Potluck do
       potluck.add_dish(cocktail_meatballs)
       potluck.add_dish(candy_salad)
 
-      appetizers = potluck.dishes.get_all_from_category(:appetizer)
+      appetizers = potluck.get_all_from_category(:appetizer)
 
       expect(appetizers).to eq([couscous_salad, summer_pizza])
     end
